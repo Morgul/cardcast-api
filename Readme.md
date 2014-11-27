@@ -38,7 +38,7 @@ wraps all cards in `Card` objects, which should eventually support things like f
 
 ### Example
 
-If you want to see a complete example, check out [/example/test.js]()
+If you want to see a complete example, check out [/example/test.js](https://github.com/Morgul/cardcast-api/blob/master/example/test.js)
 
 ## Status
 
