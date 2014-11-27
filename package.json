@@ -1,0 +1,20 @@
+{
+  "name": "cardcast-api",
+  "version": "0.1.0",
+  "description": "An unofficial library for working with the cardcasrgame.com api.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cardcast",
+    "api"
+  ],
+  "author": "Christopher S. Case <chris.case@g33xnexus.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^2.3.11",
+    "lodash": "^2.4.1",
+    "omega-logger": "^0.5.6"
+  }
+}

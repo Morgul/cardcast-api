@@ -1,0 +1,7 @@
+.DS_Store
+
+# IntelliJ artifacts
+.idea
+
+# Node artifacts
+node_modules
