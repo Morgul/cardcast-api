@@ -31,12 +31,12 @@ CardcastAPI.prototype.search = function(query)
     return api.makeAPICall(url);
 }; // end search
 
-CardcastAPI.prototype.deck = function(deckCode)
+CardcastAPI.prototype.deck = function(playCode)
 {
     // Not sure if it's required, but it's more formal
-    deckCode = deckCode.toUpperCase();
+    playCode = playCode.toUpperCase();
 
-    var url = this.apiURL + '/decks/' + deckCode;
+    var url = this.apiURL + '/decks/' + playCode;
 
     return api.makeAPICall(url)
         .then(function(summary)
