@@ -1,5 +1,5 @@
 //----------------------------------------------------------------------------------------------------------------------
-// Main entrypoint for the CardCast API.
+// Main entrypoint for the Cardcast API.
 //
 // @module index.js
 //----------------------------------------------------------------------------------------------------------------------
@@ -13,25 +13,25 @@ var errors = require('./lib/errors');
 
 //----------------------------------------------------------------------------------------------------------------------
 
-function CardCastAPI(hostname)
+function CardcastAPI(hostname)
 {
     this.hostname = hostname || 'https://api.cardcastgame.com';
-} // end CardCastAPI()
+} // end CardcastAPI()
 
-CardCastAPI.prototype = {
+CardcastAPI.prototype = {
     get apiURL() {
         return this.hostname + '/v1'
     }
 }; // end prototype
 
-CardCastAPI.prototype.search = function(query)
+CardcastAPI.prototype.search = function(query)
 {
     var url = api.buildURL(this.apiURL + '/decks', { search: query });
 
     return api.makeAPICall(url);
 }; // end search
 
-CardCastAPI.prototype.deck = function(deckCode)
+CardcastAPI.prototype.deck = function(deckCode)
 {
     // Not sure if it's required, but it's more formal
     deckCode = deckCode.toUpperCase();
@@ -48,7 +48,7 @@ CardCastAPI.prototype.deck = function(deckCode)
 //----------------------------------------------------------------------------------------------------------------------
 
 module.exports = {
-    CardCastAPI: CardCastAPI,
+    CardcastAPI: CardcastAPI,
     errors: errors
 }; // end exports
 

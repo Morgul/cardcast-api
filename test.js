@@ -4,11 +4,11 @@
 // @module test.js
 //----------------------------------------------------------------------------------------------------------------------
 
-var CardCastAPI = require('./index.js').CardCastAPI;
+var CardcastAPI = require('./index.js').CardcastAPI;
 
 //----------------------------------------------------------------------------------------------------------------------
 
-var api = new CardCastAPI();
+var api = new CardcastAPI();
 
 /*
 api.search("biscuit")
