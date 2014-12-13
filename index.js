@@ -24,9 +24,9 @@ CardcastAPI.prototype = {
     }
 }; // end prototype
 
-CardcastAPI.prototype.search = function(query)
+CardcastAPI.prototype.search = function(query, offset)
 {
-    var url = api.buildURL(this.apiURL + '/decks', { search: query });
+    var url = api.buildURL(this.apiURL + '/decks', { search: query, offset: offset });
 
     return api.makeAPICall(url);
 }; // end search
