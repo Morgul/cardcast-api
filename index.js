@@ -9,6 +9,7 @@ var Promise = require('bluebird');
 
 var api = require('./lib/api');
 var deck = require('./lib/deck');
+var cards = require('./lib/cards');
 var errors = require('./lib/errors');
 
 //----------------------------------------------------------------------------------------------------------------------
@@ -49,6 +50,7 @@ CardcastAPI.prototype.deck = function(playCode)
 
 module.exports = {
     CardcastAPI: CardcastAPI,
+    cards: cards,
     errors: errors
 }; // end exports
 
