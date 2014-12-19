@@ -1,6 +1,6 @@
 {
   "name": "cardcast-api",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "An unofficial library for working with the cardcastgame.com api.",
   "main": "index.js",
   "scripts": {
