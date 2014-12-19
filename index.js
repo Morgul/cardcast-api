@@ -14,14 +14,19 @@ var errors = require('./lib/errors');
 
 //----------------------------------------------------------------------------------------------------------------------
 
-function CardcastAPI(hostname)
+function CardcastAPI(options)
 {
-    this.hostname = hostname || 'https://api.cardcastgame.com';
+    _.defaults(options, {
+        hostname: 'https://api.cardcastgame.com',
+        timeout: 2000
+    });
+
+    this.options = options;
 } // end CardcastAPI()
 
 CardcastAPI.prototype = {
     get apiURL() {
-        return this.hostname + '/v1'
+        return this.options.hostname + '/v1'
     }
 }; // end prototype
 
@@ -29,7 +34,7 @@ CardcastAPI.prototype.search = function(query, offset)
 {
     var url = api.buildURL(this.apiURL + '/decks', { search: query, offset: offset });
 
-    return api.makeAPICall(url);
+    return api.makeAPICall(url, this.options.timeout);
 }; // end search
 
 CardcastAPI.prototype.deck = function(playCode)
@@ -39,7 +44,7 @@ CardcastAPI.prototype.deck = function(playCode)
 
     var url = this.apiURL + '/decks/' + playCode;
 
-    return api.makeAPICall(url)
+    return api.makeAPICall(url, this.options.timeout)
         .then(function(summary)
         {
             return deck.buildDeck(url, summary);
