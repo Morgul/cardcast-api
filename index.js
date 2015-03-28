@@ -16,12 +16,10 @@ var errors = require('./lib/errors');
 
 function CardcastAPI(options)
 {
-    _.defaults(options, {
+   this.options = _.defaults({}, options, {
         hostname: 'https://api.cardcastgame.com',
         timeout: 2000
     });
-
-    this.options = options;
 } // end CardcastAPI()
 
 CardcastAPI.prototype = {
