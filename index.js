@@ -54,6 +54,7 @@ CardcastAPI.prototype.deck = function(playCode)
 module.exports = {
     CardcastAPI: CardcastAPI,
     cards: cards,
+	deck: deck,
     errors: errors
 }; // end exports
 
